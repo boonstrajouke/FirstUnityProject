@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public int health;
     public int maxHealth = 10;
 
+    // public static Vector3 lastCheckPointPos = new Vector3(0, 2, 0);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,8 +66,11 @@ public class Player : MonoBehaviour
         if (other.gameObject.layer == 9)
         {
             Destroy(other.gameObject);
+            // System.Threading.Thread.Sleep(2000);
             superJumpsRemaining++;
         }
+
+        // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
     }
 
     public void TakeDamage(int amount)
@@ -73,8 +78,10 @@ public class Player : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            Scene thisScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(thisScene.name);
+            {
+                Scene thisScene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(thisScene.name);
+            }
         }
     }
 }
