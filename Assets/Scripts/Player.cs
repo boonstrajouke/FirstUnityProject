@@ -72,6 +72,10 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.layer == 10)
         {
+            // Screen fade out
+            // Wait a few seconds
+            // // System.Threading.Thread.Sleep(2000);
+            // New scene loads in via fade in
             Application.LoadLevel(1);
             // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
         }
