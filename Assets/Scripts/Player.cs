@@ -70,7 +70,11 @@ public class Player : MonoBehaviour
             superJumpsRemaining++;
         }
 
-        // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
+        if (other.gameObject.layer == 10)
+        {
+            Application.LoadLevel(1);
+            // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
+        }
     }
 
     public void TakeDamage(int amount)
