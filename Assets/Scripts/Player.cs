@@ -80,6 +80,11 @@ public class Player : MonoBehaviour
             // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
         }
 
+        if (other.gameObject.layer == 12)
+        {
+            Application.LoadLevel(2);
+        }
+
         if (other.gameObject.layer == 11)
         {
             Destroy(other.gameObject);

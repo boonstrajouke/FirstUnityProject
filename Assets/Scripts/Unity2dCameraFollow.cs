@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Unity2dCameraFollow : MonoBehaviour
@@ -11,6 +12,7 @@ public class Unity2dCameraFollow : MonoBehaviour
     public Vector3 offset;
     Vector3 targetPos;
     public float speed = 15f;
+    private bool MouseXWasPressed;
 
     // Use this for initialization
     void Start()
@@ -35,7 +37,13 @@ public class Unity2dCameraFollow : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
         }
 
+        /*
         // Hold lock camera on player while right mouse button is pressed
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        {
+            MouseXWasPressed = true;
+        }
+        */
     }
 }
 
