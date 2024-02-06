@@ -355,6 +355,7 @@
 "Assets/Scripts/FirstCheckPoint.cs"
 "Assets/Scripts/LavaDeathZone.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Unity2dCameraFollow.cs"
 -langversion:9.0
 
 /deterministic

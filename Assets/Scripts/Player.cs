@@ -66,8 +66,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.layer == 9)
         {
             Destroy(other.gameObject);
-            // System.Threading.Thread.Sleep(2000);
             superJumpsRemaining++;
+            // System.Threading.Thread.Sleep(2000);
         }
 
         if (other.gameObject.layer == 10)
@@ -78,6 +78,11 @@ public class Player : MonoBehaviour
             // New scene loads in via fade in
             Application.LoadLevel(1);
             // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
+        }
+
+        if (other.gameObject.layer == 11)
+        {
+            Destroy(other.gameObject);
         }
     }
 

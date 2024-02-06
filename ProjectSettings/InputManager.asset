@@ -103,7 +103,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Mouse X
-    descriptiveName: 
+    descriptiveName: Right mouse button lock camera on while holding
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
