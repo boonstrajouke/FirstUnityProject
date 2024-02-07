@@ -354,7 +354,11 @@
 "Assets/Scripts/Coin.cs"
 "Assets/Scripts/FirstCheckPoint.cs"
 "Assets/Scripts/LavaDeathZone.cs"
+"Assets/Scripts/Level3Flashlight.cs"
+"Assets/Scripts/MoveCamera3d.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/PlayerCamFirstPerson.cs"
+"Assets/Scripts/PlayerMovement3d.cs"
 "Assets/Scripts/Unity2dCameraFollow.cs"
 -langversion:9.0
 

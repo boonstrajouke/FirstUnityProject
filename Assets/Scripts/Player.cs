@@ -35,6 +35,13 @@ public class Player : MonoBehaviour
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
+
+        /*
+        // Mouse direction to rotate entire player
+        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        // */
     }
 
     // FixedUpdate is called once every physic update
@@ -88,6 +95,11 @@ public class Player : MonoBehaviour
         if (other.gameObject.layer == 11)
         {
             Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.layer == 13)
+        {
+            Application.LoadLevel(3);
         }
     }
 

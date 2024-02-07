@@ -68,8 +68,12 @@
     <Compile Include="Assets/Scripts/Unity2dCameraFollow.cs" />
     <Compile Include="Assets/Scripts/FirstCheckPoint.cs" />
     <Compile Include="Assets/Scripts/CheckPoint.cs" />
+    <Compile Include="Assets/Scripts/PlayerMovement3d.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/Scripts/LavaDeathZone.cs" />
+    <Compile Include="Assets/Scripts/Level3Flashlight.cs" />
+    <Compile Include="Assets/Scripts/MoveCamera3d.cs" />
+    <Compile Include="Assets/Scripts/PlayerCamFirstPerson.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
