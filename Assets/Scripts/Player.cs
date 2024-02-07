@@ -99,7 +99,8 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.layer == 13)
         {
-            Application.LoadLevel(3);
+            // Application.LoadLevel(3);
+            SceneManager.LoadScene(3);
         }
     }
 
