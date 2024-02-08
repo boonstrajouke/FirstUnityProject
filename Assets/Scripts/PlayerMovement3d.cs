@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class PlayerMovementTutorial : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class PlayerMovementTutorial : MonoBehaviour
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
+
+    [Header("Lights")]
+    [SerializeField] GameObject LightTrigger;
+    public bool lightIsOn;
 
     /*
     [HideInInspector] public float walkSpeed;
@@ -69,6 +74,8 @@ public class PlayerMovementTutorial : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+
+        lightIsOn = false;
     }
 
     private void Update()
@@ -229,5 +236,10 @@ public class PlayerMovementTutorial : MonoBehaviour
     private Vector3 GetSlopeMoveDirection()
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // To fill in
     }
 }

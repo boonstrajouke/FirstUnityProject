@@ -83,13 +83,15 @@ public class Player : MonoBehaviour
             // Wait a few seconds
             // // System.Threading.Thread.Sleep(2000);
             // New scene loads in via fade in
-            Application.LoadLevel(1);
+            // Application.LoadLevel(1);
+            SceneManager.LoadScene(1);
             // GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
         }
 
         if (other.gameObject.layer == 12)
         {
-            Application.LoadLevel(2);
+            // Application.LoadLevel(2);
+            SceneManager.LoadScene(2);
         }
 
         if (other.gameObject.layer == 11)
