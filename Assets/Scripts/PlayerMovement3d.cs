@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementTutorial : MonoBehaviour
 {
@@ -92,6 +93,11 @@ public class PlayerMovementTutorial : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void FixedUpdate()
@@ -238,8 +244,12 @@ public class PlayerMovementTutorial : MonoBehaviour
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
 
+    [Obsolete]
     private void OnTriggerEnter(Collider other)
     {
-        // To fill in
+        if (other.gameObject.layer == 16)
+        {
+            Application.LoadLevel(4);
+        }
     }
 }
